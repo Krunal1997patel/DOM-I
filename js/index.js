@@ -40,3 +40,72 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//All the nav links
+let navLink  = document.querySelectorAll('a');
+
+for(let i = 0; i < navLink.length; i++){
+  navLink[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  navLink[i].style.color = 'green';
+}
+
+
+//the main title of the page
+let mainTitle = document.querySelector('h1');
+mainTitle.textContent = siteContent.cta.h1;
+
+mainTitle.innerText = 'DOM \n Is \n Awesome'
+
+//the big image in circle
+let circleImage = document.querySelector('#cta-img');
+circleImage.src = siteContent.cta["img-src"];
+circleImage.alt = 'code in circle'
+
+//the button text
+let buttonText = document.querySelector('button');
+
+buttonText.textContent = siteContent.cta.button;
+
+//features and about for main content
+let topContentTitle = document.querySelectorAll('.text-content h4');
+topContentTitle[0].textContent = siteContent["main-content"]["features-h4"];
+topContentTitle[1].textContent = siteContent["main-content"]["about-h4"];
+
+let topContentPara = document.querySelectorAll('.text-content p');
+topContentPara[0].textContent = siteContent["main-content"]["features-content"];
+topContentPara[1].textContent = siteContent["main-content"]["about-content"];
+
+
+//image with code 
+let boxImage = document.querySelector('.middle-img');
+boxImage.src = siteContent["main-content"]["middle-img-src"];
+boxImage.alt = 'code in a box'
+
+//service, product, vision for bottom content
+let bottomContentTitle = document.querySelectorAll('.bottom-content h4');
+bottomContentTitle[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentTitle[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentTitle[2].textContent = siteContent["main-content"]["vision-h4"];
+
+//service, product, vision paragraph for bottom content
+let bottomContentPara = document.querySelectorAll('.bottom-content p');
+bottomContentPara[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentPara[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentPara[2].textContent = siteContent["main-content"]["vision-content"];
+
+// the contact title
+let contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent.contact["contact-h4"];
+
+//contact p tag
+let contactPara = document.querySelectorAll('.contact p');
+contactPara[0].textContent = siteContent.contact.address;
+contactPara[1].textContent = siteContent.contact.phone;
+contactPara[2].textContent = siteContent.contact.email;
+
+contactPara[0].innerText = '123 Way 456 Street \n Somewhere, USA'
+
+//footer of the page
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
