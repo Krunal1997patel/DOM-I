@@ -50,12 +50,26 @@ for(let i = 0; i < navLink.length; i++){
   navLink[i].style.color = 'green';
 }
 
+let addLink = document.querySelector('nav');
+
+let home = document.createElement('a');
+home.textContent = 'Home';
+home.href = '#';
+home.style.color = 'green';
+addLink.prepend(home);
+
+let news = document.createElement('a');
+news.textContent = 'News';
+news.href = '#';
+news.style.color = 'green';
+addLink.appendChild(news);
+
 
 //the main title of the page
 let mainTitle = document.querySelector('h1');
 mainTitle.textContent = siteContent.cta.h1;
 
-mainTitle.innerText = 'DOM \n Is \n Awesome'
+mainTitle.innerText = `DOM \n Is  \n Awesome`
 
 //the big image in circle
 let circleImage = document.querySelector('#cta-img');
